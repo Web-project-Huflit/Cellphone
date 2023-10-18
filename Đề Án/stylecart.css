@@ -1,0 +1,40 @@
+.super-cart{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart-header {
+    width: 600px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(203, 203, 203);
+}
+.cart-header p {
+    flex: 1; /* Để p mở rộng để lấp đầy không gian còn lại */
+    text-align: center; /* Đặt văn bản giữa theo chiều ngang */
+    margin: 0; /* Loại bỏ lề mặc định của thẻ p */
+    line-height: 50px; /* Cân giữa p theo chiều dọc bằng cách đặt chiều cao và line-height bằng nhau */
+}
+.cart-bottom{
+    width: 600px;
+    height: 40px;
+    position: fixed;
+    background-color: #888f96;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    z-index: 1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.cart-bottom a{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    text-decoration: none;
+
+}
+
