@@ -1,14 +1,12 @@
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
         document.getElementById("upBtn").style.display = "block";
-    } else {
+    else 
         document.getElementById("upBtn").style.display = "none";
-    }
-}
+};
 
+ 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
     document.body.scrollTop = 0;
@@ -115,6 +113,7 @@ leftbtntwo.addEventListener("click",function(){
 })
 }
 
+//---------------------------------------------
 function toggleFav(icon) {
     const heartIcon = icon; // Lấy phần tử biểu tượng trái tim được click
 
@@ -126,7 +125,6 @@ function toggleFav(icon) {
         heartIcon.style.backgroundColor = "red";
     }
 }
-
 
 
 window.onload = function() {

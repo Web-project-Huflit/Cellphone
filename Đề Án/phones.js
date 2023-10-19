@@ -1,4 +1,4 @@
-var responsive = function(){
+window.onload = function(){
     //-----------Price-----------
     let rangeInput = document.querySelectorAll('.range-input input');
     let rangeText = document.querySelectorAll('.range-text div');
@@ -88,9 +88,7 @@ var responsive = function(){
     }  
 }
 
-window.onload = function() {
-    responsive();  
-}
+
 //--------------------------------
 let isButtonClicked=true;
 function changeColor() {
