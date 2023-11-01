@@ -48,14 +48,15 @@ li{
   margin-bottom: 10px;
 }
 #header-taskbar{
-    background-color: #7E878E;
+    background-color: #2419C2;
     align-items: center;
     display: flex;
     height: 70px;
     justify-content: center;
     margin: 0 auto;
     padding: 0;
-    width: 100%
+    width: 100%;
+    
 }
 .header-taskbar-view{
     align-items: center;
@@ -89,7 +90,7 @@ li{
     padding: 0px 8px;
     border-radius: 5px;
     height: 40px;
-    background-color: #a8a8a8;
+    background-color: #cbc8fa;
     display: flex;
     align-items: center;
     width: auto;
@@ -327,7 +328,7 @@ border-bottom-left-radius: 10px;
 
 .header-taskbar-location{
   display: inline-block;
-  background-color: #a8a8a8;
+  background-color: #cbc8fa;
   padding: 4px 8px;
   text-align: center;
   cursor: pointer;
@@ -371,6 +372,8 @@ border-bottom-left-radius: 10px;
   display: block;
   border-bottom: 1px solid rgb(180, 180, 180);
   padding: 10px 0;
+  padding-top: 25px;
+  margin-bottom: 10px;
  }
  .location-from-content h2 span{
   display: inline-block;
@@ -384,6 +387,7 @@ border-bottom-left-radius: 10px;
   cursor: pointer;
   transform: translateY( -50%);
   line-height: 30px;
+  margin-top: 5px;
  }
 
  .location-from-content form input,select{
@@ -393,8 +397,8 @@ border-bottom-left-radius: 10px;
   margin-top: 20px;
   border-radius: 6px;
   border: 1.5px solid black;
-  
  }
+ 
  .location-from-content form button{
   margin-top: 20px;
   height: 40px;
@@ -432,15 +436,15 @@ border-bottom-left-radius: 10px;
 .header-taskbar-phone {
   display: inline-block;
   padding: 4px 8px;
-  background-color: #7E878E;
+  background-color: #cbc8fa;
   border: none;
   cursor: pointer;
   text-align: center;
   border-radius: 5px;
   font-size: 14px;
-  height: 40px;
+  height: 30px;
   width: 110px;
-  padding-top: 10px;
+  line-height: 15px;
 }
 .header-taskbar-phone a{
     text-decoration: none;
@@ -456,16 +460,16 @@ border-bottom-left-radius: 10px;
 .header-taskbar-address{
     display: inline-block;
     padding: 4px 8px;
-    background-color: #7E878E;
+    background-color: #cbc8fa;
     border: none;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
-    width: 100px;
-    height: 40px;
-    padding-top: 10px;
+    width: 90px;
+    height: 30px;
+    line-height: 15px;
 }
 
 .header-taskbar-address a{
@@ -483,16 +487,16 @@ border-bottom-left-radius: 10px;
 .header-taskbar-boxcard{
     display: inline-block;
     padding: 4px 8px;
-    background-color: #7E878E;
+    background-color: #cbc8fa;
     border: none;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
     font-size: 14px;
-    width: 60px;
-    height: 40px;
-    padding-top: 10px;
+    width: 50px;
+    height: 30px;
+    line-height: 15px;
 }
 
 .header-taskbar-boxcard a{
@@ -509,15 +513,15 @@ border-bottom-left-radius: 10px;
 .header-taskbar-ship{
     display: inline-block;
     padding: 4px 8px;
-    background-color: #7E878E;
+    background-color: #cbc8fa;
     border: none;
     cursor: pointer;
     text-align: center;
     border-radius: 5px;
     font-size: 14px;
-    width: 90px;
-    height: 40px;
-    padding-top: 10px;
+    width: 80px;
+    height: 30px;
+    line-height: 15px;
 }
 .header-taskbar-ship a{
   text-decoration: none;
@@ -533,7 +537,7 @@ border-bottom-left-radius: 10px;
 .header-taskbar-account{
     display: inline-block;
     padding: 6px;
-    background-color: #a8a8a8;
+    background-color: #cbc8fa;
     cursor: pointer;
     text-align: center;
     border-radius: 5px;
@@ -1099,59 +1103,81 @@ width: 70px;
 }
 .footer-top{
   width: 1200px;
-  height: 200px;
+  height: 220px;
   display: flex;
   justify-content: space-around;
   margin: auto;
 }
 .footer-top-support{
   width: 300px;
+  margin-top: 20px;
 }
 .footer-top-support p{
   color: #d70018;
   font-size: 18px;
+  padding: 3px;
 }
 
 .footer-top-support a{
   text-decoration: none; 
-}
-.footer-top-support a > p{
   color: #000000;
   font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+.footer-top-support a:hover{
+  color: red;
 }
 .footer-top-policy{
   width: 300px;
+  margin-top: 20px;
+  
 }
 .footer-top-policy p{
   color: #d70018;
   font-size: 18px;
+  padding: 3px;
 }
 .footer-top-policy a{
   text-decoration: none; 
-}
-.footer-top-policy a > p{
   font-size: 14px;
   color: #000000;
+  display: block;
+  margin-top: 5px;
+}
+.footer-top-policy a:hover{
+color: red;
 }
 .footer-top-contact{
   width: 300px;
+  margin-top: 20px;
 }
 .footer-top-contact p{
   color: #d70018;
   font-size: 18px;
+  padding: 3px;
 }
-.footer-top-contact div > p{
+.footer-top-contact div > a{
   color: #000000;
   font-size: 14px;
+  text-decoration: none; 
+  display: block;
+  margin-top: 5px;
+}
+.footer-top-contact div > a:hover{
+  color: red;
 }
 .footer-top-media{
   width: 300px;
   height: 50px;
+  margin-top: 20px;
 }
 .footer-top-media p{
+  padding-bottom: 10px;
   color: #d70018;
   font-size: 18px;
 }
+
 .fb img{
   width: 50px;
   height: 40px;
