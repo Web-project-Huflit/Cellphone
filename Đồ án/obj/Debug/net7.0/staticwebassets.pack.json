@@ -1,0 +1,793 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/.DS_Store",
+      "PackagePath": "staticwebassets/Pic/.DS_Store"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/Bat-mi-5-meo-chup-anh-chan-dung-sieu-dep-tren-galaxy-s23-xtmobile.webp",
+      "PackagePath": "staticwebassets/Pic/Bat-mi-5-meo-chup-anh-chan-dung-sieu-dep-tren-galaxy-s23-xtmobile.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/IP14OM.JPG",
+      "PackagePath": "staticwebassets/Pic/IP14OM.JPG"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/Logo.jpg",
+      "PackagePath": "staticwebassets/Pic/Logo.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/asus tuf.jpg",
+      "PackagePath": "staticwebassets/Pic/asus tuf.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg-login.png.jpg",
+      "PackagePath": "staticwebassets/Pic/bg-login.png.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg1.svg",
+      "PackagePath": "staticwebassets/Pic/bg1.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg10.svg",
+      "PackagePath": "staticwebassets/Pic/bg10.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg11.svg",
+      "PackagePath": "staticwebassets/Pic/bg11.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg12.svg",
+      "PackagePath": "staticwebassets/Pic/bg12.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg13.png",
+      "PackagePath": "staticwebassets/Pic/bg13.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg14.png",
+      "PackagePath": "staticwebassets/Pic/bg14.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg15.png",
+      "PackagePath": "staticwebassets/Pic/bg15.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg16.png",
+      "PackagePath": "staticwebassets/Pic/bg16.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg17.png",
+      "PackagePath": "staticwebassets/Pic/bg17.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg18.png",
+      "PackagePath": "staticwebassets/Pic/bg18.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg19.png",
+      "PackagePath": "staticwebassets/Pic/bg19.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg2.svg",
+      "PackagePath": "staticwebassets/Pic/bg2.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg20.jpeg",
+      "PackagePath": "staticwebassets/Pic/bg20.jpeg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg20.webp",
+      "PackagePath": "staticwebassets/Pic/bg20.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg3.svg",
+      "PackagePath": "staticwebassets/Pic/bg3.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg4.svg",
+      "PackagePath": "staticwebassets/Pic/bg4.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg5.svg",
+      "PackagePath": "staticwebassets/Pic/bg5.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg6.svg",
+      "PackagePath": "staticwebassets/Pic/bg6.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg7.svg",
+      "PackagePath": "staticwebassets/Pic/bg7.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg8.svg",
+      "PackagePath": "staticwebassets/Pic/bg8.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/bg9.svg",
+      "PackagePath": "staticwebassets/Pic/bg9.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/cheap.png",
+      "PackagePath": "staticwebassets/Pic/cheap.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/chup_anh_bang_dien_thoai.jpg",
+      "PackagePath": "staticwebassets/Pic/chup_anh_bang_dien_thoai.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/csdt.jpg",
+      "PackagePath": "staticwebassets/Pic/csdt.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/facebook.jpg",
+      "PackagePath": "staticwebassets/Pic/facebook.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/giaohang.jpg",
+      "PackagePath": "staticwebassets/Pic/giaohang.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/header-img.png",
+      "PackagePath": "staticwebassets/Pic/header-img.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/iPhone 15.png",
+      "PackagePath": "staticwebassets/Pic/iPhone 15.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/iconcable.svg",
+      "PackagePath": "staticwebassets/Pic/iconcable.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/iconfire.png",
+      "PackagePath": "staticwebassets/Pic/iconfire.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/iconwatch.svg",
+      "PackagePath": "staticwebassets/Pic/iconwatch.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/intagram.png",
+      "PackagePath": "staticwebassets/Pic/intagram.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/ipad.png",
+      "PackagePath": "staticwebassets/Pic/ipad.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/m14.png",
+      "PackagePath": "staticwebassets/Pic/m14.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/nubia.png",
+      "PackagePath": "staticwebassets/Pic/nubia.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/oppo.png",
+      "PackagePath": "staticwebassets/Pic/oppo.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/ssz5.png",
+      "PackagePath": "staticwebassets/Pic/ssz5.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/tiktok.webp",
+      "PackagePath": "staticwebassets/Pic/tiktok.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/vat.jpg",
+      "PackagePath": "staticwebassets/Pic/vat.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/vivo.png",
+      "PackagePath": "staticwebassets/Pic/vivo.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/youtube.png",
+      "PackagePath": "staticwebassets/Pic/youtube.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/Pic/zalo.png",
+      "PackagePath": "staticwebassets/Pic/zalo.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/css/productlist.css",
+      "PackagePath": "staticwebassets/css/productlist.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/css/style-login.css",
+      "PackagePath": "staticwebassets/css/style-login.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/css/stylecart.css",
+      "PackagePath": "staticwebassets/css/stylecart.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/js/.DS_Store",
+      "PackagePath": "staticwebassets/js/.DS_Store"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/js/cart.js",
+      "PackagePath": "staticwebassets/js/cart.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/js/phones.js",
+      "PackagePath": "staticwebassets/js/phones.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/js/script-login.js",
+      "PackagePath": "staticwebassets/js/script-login.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-lap/.DS_Store",
+      "PackagePath": "staticwebassets/pic-lap/.DS_Store"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-lap/2910_hinhanhmaytinhxachtay.jpg",
+      "PackagePath": "staticwebassets/pic-lap/2910_hinhanhmaytinhxachtay.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-lap/Featured_Laptop-Asus-Core-i7.jpg",
+      "PackagePath": "staticwebassets/pic-lap/Featured_Laptop-Asus-Core-i7.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-lap/dell-n7391-2in1-5842.jpg",
+      "PackagePath": "staticwebassets/pic-lap/dell-n7391-2in1-5842.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-lap/laptop2in1digitaltrends_1280x720-800-resize.jpg",
+      "PackagePath": "staticwebassets/pic-lap/laptop2in1digitaltrends_1280x720-800-resize.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-lap/mua-laptop-dell-hay-asus-5.jpg",
+      "PackagePath": "staticwebassets/pic-lap/mua-laptop-dell-hay-asus-5.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-lap/zenbookux4255_1280x720-800-resize.jpg",
+      "PackagePath": "staticwebassets/pic-lap/zenbookux4255_1280x720-800-resize.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-phone/.DS_Store",
+      "PackagePath": "staticwebassets/pic-phone/.DS_Store"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-phone/camera-00.jpg.webp",
+      "PackagePath": "staticwebassets/pic-phone/camera-00.jpg.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-phone/dt-game.jpeg",
+      "PackagePath": "staticwebassets/pic-phone/dt-game.jpeg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-phone/mongnhe.png",
+      "PackagePath": "staticwebassets/pic-phone/mongnhe.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-phone/samsung-galaxy-m51-ra-mat.jpg",
+      "PackagePath": "staticwebassets/pic-phone/samsung-galaxy-m51-ra-mat.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-phone/samsunggalaxym62_1280x720-800-resize.jpg",
+      "PackagePath": "staticwebassets/pic-phone/samsunggalaxym62_1280x720-800-resize.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/.DS_Store",
+      "PackagePath": "staticwebassets/pic-smart-home/.DS_Store"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh--7.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh--7.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh-1.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh-1.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh-11.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh-11.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh-2.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh-2.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh-3.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh-3.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh-4.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh-4.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh-5.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh-5.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh-6.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh-6.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh-8.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh-8.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/pic-smart-home/icon-brand-nhathong-minh-9.jpg",
+      "PackagePath": "staticwebassets/pic-smart-home/icon-brand-nhathong-minh-9.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/Apple_watch.webp",
+      "PackagePath": "staticwebassets/picbrand/Apple_watch.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/Asus (1).webp",
+      "PackagePath": "staticwebassets/picbrand/Asus (1).webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/Dell.webp",
+      "PackagePath": "staticwebassets/picbrand/Dell.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/HP.webp",
+      "PackagePath": "staticwebassets/picbrand/HP.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/LG.webp",
+      "PackagePath": "staticwebassets/picbrand/LG.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/Lenovo.webp",
+      "PackagePath": "staticwebassets/picbrand/Lenovo.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/MSI.webp",
+      "PackagePath": "staticwebassets/picbrand/MSI.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/Microsoft_surface.webp",
+      "PackagePath": "staticwebassets/picbrand/Microsoft_surface.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/Nokia.webp",
+      "PackagePath": "staticwebassets/picbrand/Nokia.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/acer.webp",
+      "PackagePath": "staticwebassets/picbrand/acer.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/amazfit.webp",
+      "PackagePath": "staticwebassets/picbrand/amazfit.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/apple-ipad.webp",
+      "PackagePath": "staticwebassets/picbrand/apple-ipad.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/apple.webp",
+      "PackagePath": "staticwebassets/picbrand/apple.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/asus.webp",
+      "PackagePath": "staticwebassets/picbrand/asus.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/coros.webp",
+      "PackagePath": "staticwebassets/picbrand/coros.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/garmin.webp",
+      "PackagePath": "staticwebassets/picbrand/garmin.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/gigabyte.webp",
+      "PackagePath": "staticwebassets/picbrand/gigabyte.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/huaewwei-tablet.webp",
+      "PackagePath": "staticwebassets/picbrand/huaewwei-tablet.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/macbook.webp",
+      "PackagePath": "staticwebassets/picbrand/macbook.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/nubia.webp",
+      "PackagePath": "staticwebassets/picbrand/nubia.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/oneplus.webp",
+      "PackagePath": "staticwebassets/picbrand/oneplus.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/oppo.webp",
+      "PackagePath": "staticwebassets/picbrand/oppo.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/realme.webp",
+      "PackagePath": "staticwebassets/picbrand/realme.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/ssphone.webp",
+      "PackagePath": "staticwebassets/picbrand/ssphone.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/techno.webp",
+      "PackagePath": "staticwebassets/picbrand/techno.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/vivo.webp",
+      "PackagePath": "staticwebassets/picbrand/vivo.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picbrand/xiaomi.webp",
+      "PackagePath": "staticwebassets/picbrand/xiaomi.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/.DS_Store",
+      "PackagePath": "staticwebassets/picrequired/.DS_Store"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/camera-dt.jpg",
+      "PackagePath": "staticwebassets/picrequired/camera-dt.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/cauhinhcao.jpg",
+      "PackagePath": "staticwebassets/picrequired/cauhinhcao.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/choigame-01.webp",
+      "PackagePath": "staticwebassets/picrequired/choigame-01.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/choigame.jpg",
+      "PackagePath": "staticwebassets/picrequired/choigame.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/dh-chong-nuoc.jpg",
+      "PackagePath": "staticwebassets/picrequired/dh-chong-nuoc.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/dh-kt-suc-khoe.jpg",
+      "PackagePath": "staticwebassets/picrequired/dh-kt-suc-khoe.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/dh-nghe-goi.jpg",
+      "PackagePath": "staticwebassets/picrequired/dh-nghe-goi.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/dh-the-thao.jpg",
+      "PackagePath": "staticwebassets/picrequired/dh-the-thao.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/dohoa-01.webp",
+      "PackagePath": "staticwebassets/picrequired/dohoa-01.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/dong-ho-tre-em.jpg",
+      "PackagePath": "staticwebassets/picrequired/dong-ho-tre-em.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/dungluong.jpg",
+      "PackagePath": "staticwebassets/picrequired/dungluong.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/giaitri-01.webp",
+      "PackagePath": "staticwebassets/picrequired/giaitri-01.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/hoctap-vp01.webp",
+      "PackagePath": "staticwebassets/picrequired/hoctap-vp01.webp"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/lapcamung.svg",
+      "PackagePath": "staticwebassets/picrequired/lapcamung.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/lapdohoa.svg",
+      "PackagePath": "staticwebassets/picrequired/lapdohoa.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/lapgaming.svg",
+      "PackagePath": "staticwebassets/picrequired/lapgaming.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/lapmongnhe.svg",
+      "PackagePath": "staticwebassets/picrequired/lapmongnhe.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/lapvanphong.svg",
+      "PackagePath": "staticwebassets/picrequired/lapvanphong.svg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/logo-cate-loa.png",
+      "PackagePath": "staticwebassets/picrequired/logo-cate-loa.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/logo-cate-micro-kara.png",
+      "PackagePath": "staticwebassets/picrequired/logo-cate-micro-kara.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/logo-cate-micro-thu-am.png",
+      "PackagePath": "staticwebassets/picrequired/logo-cate-micro-thu-am.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/logo-cate-tai-nghe.png",
+      "PackagePath": "staticwebassets/picrequired/logo-cate-tai-nghe.png"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/mong-nhe.jpg",
+      "PackagePath": "staticwebassets/picrequired/mong-nhe.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/pintrau.jpg",
+      "PackagePath": "staticwebassets/picrequired/pintrau.jpg"
+    },
+    {
+      "Id": "/Users/duongkhiem/Documents/Lập trình web/Đồ án/wwwroot/picrequired/vong-deo-tay.jpg",
+      "PackagePath": "staticwebassets/picrequired/vong-deo-tay.jpg"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.Đồ án.props",
+      "PackagePath": "build\\Đồ án.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Đồ án.props",
+      "PackagePath": "buildMultiTargeting\\Đồ án.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Đồ án.props",
+      "PackagePath": "buildTransitive\\Đồ án.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Đồ án.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
