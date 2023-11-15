@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8d9f8104ae0a475eb908f68d382a63c8" Name="Diagram1">
+        <EntityTypeShape EntityType="BanHangModel.AdminUser" Width="1.5" PointX="7.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.Comment" Width="1.5" PointX="12" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.CTGH" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.CTSP" Width="1.5" PointX="12" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.Đơn_hàng" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.Giỏ_hàng" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.Hỏi_đáp" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.Khách_hàng" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.SẢN_PHẨM" Width="1.5" PointX="9.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.THƯƠNG_HIỆU" Width="1.5" PointX="10" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.CTT" Width="1.5" PointX="14.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.Nhận_tại_của_hàng" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BanHangModel.Nhận_tận_nơi" Width="1.5" PointX="7.5" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="BanHangModel.FK__THƯƠNG_HI__Mã_Us__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="BanHangModel.FK__Comment__Mã_SP__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="BanHangModel.FK__CTGH__Mã_giỏ__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="BanHangModel.FK__Đơn_hàng__Mã_nhậ__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="BanHangModel.FK__Nhận_tại___Mã_nh__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="BanHangModel.FK__Nhận_tận___Mã_nh__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="BanHangModel.FK__CTSP__Mã_SP__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="BanHangModel.FK__CTTS__Mã_CTTS__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="BanHangModel.FK__Giỏ_hàng__Mã_KH__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="BanHangModel.FK__Hỏi_đáp__Mã_giỏ__534D60F1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

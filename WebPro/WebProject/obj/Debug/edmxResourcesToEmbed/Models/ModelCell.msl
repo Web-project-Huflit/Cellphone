@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BanHangModelStoreContainer" CdmEntityContainer="BanHangEntities">
+    <EntitySetMapping Name="AdminUsers">
+      <EntityTypeMapping TypeName="BanHangModel.AdminUser">
+        <MappingFragment StoreEntitySet="AdminUser">
+          <ScalarProperty Name="Mã_User" ColumnName="Mã_User" />
+          <ScalarProperty Name="Vai_trò" ColumnName="Vai_trò" />
+          <ScalarProperty Name="Phone_Email" ColumnName="Phone_Email" />
+          <ScalarProperty Name="Mật_khẩu" ColumnName="Mật_khẩu" />
+          <ScalarProperty Name="Ngày_tham_gia" ColumnName="Ngày_tham_gia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="BanHangModel.Comment">
+        <MappingFragment StoreEntitySet="Comment">
+          <ScalarProperty Name="Mã_cmt" ColumnName="Mã_cmt" />
+          <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
+          <ScalarProperty Name="Thời_gian" ColumnName="Thời_gian" />
+          <ScalarProperty Name="Nội_dung" ColumnName="Nội_dung" />
+          <ScalarProperty Name="Mã_SP" ColumnName="Mã_SP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTGHs">
+      <EntityTypeMapping TypeName="BanHangModel.CTGH">
+        <MappingFragment StoreEntitySet="CTGH">
+          <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Tổng_tiền" ColumnName="Tổng_tiền" />
+          <ScalarProperty Name="Mã_nhận_hàng" ColumnName="Mã_nhận_hàng" />
+          <ScalarProperty Name="Mã_giỏ" ColumnName="Mã_giỏ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTSPs">
+      <EntityTypeMapping TypeName="BanHangModel.CTSP">
+        <MappingFragment StoreEntitySet="CTSP">
+          <ScalarProperty Name="Thêm_ảnh" ColumnName="Thêm_ảnh" />
+          <ScalarProperty Name="Lượt_đánh_giá" ColumnName="Lượt_đánh_giá" />
+          <ScalarProperty Name="Mô_tả" ColumnName="Mô_tả" />
+          <ScalarProperty Name="Màu" ColumnName="Màu" />
+          <ScalarProperty Name="Trả_góp" ColumnName="Trả_góp" />
+          <ScalarProperty Name="Ưu_đãi" ColumnName="Ưu_đãi" />
+          <ScalarProperty Name="Mã_CTTS" ColumnName="Mã_CTTS" />
+          <ScalarProperty Name="Mã_SP" ColumnName="Mã_SP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Đơn_hàng">
+      <EntityTypeMapping TypeName="BanHangModel.Đơn_hàng">
+        <MappingFragment StoreEntitySet="Đơn_hàng">
+          <ScalarProperty Name="Mã_đơn_hàng" ColumnName="Mã_đơn_hàng" />
+          <ScalarProperty Name="Thời_gian" ColumnName="Thời_gian" />
+          <ScalarProperty Name="Mã_nhận_hàng" ColumnName="Mã_nhận_hàng" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Giỏ_hàng">
+      <EntityTypeMapping TypeName="BanHangModel.Giỏ_hàng">
+        <MappingFragment StoreEntitySet="Giỏ_hàng">
+          <ScalarProperty Name="Mã_giỏ" ColumnName="Mã_giỏ" />
+          <ScalarProperty Name="Đơn_giá" ColumnName="Đơn_giá" />
+          <ScalarProperty Name="Số_lượng" ColumnName="Số_lượng" />
+          <ScalarProperty Name="Tạm_tính" ColumnName="Tạm_tính" />
+          <ScalarProperty Name="Mã_KH" ColumnName="Mã_KH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hỏi_đáp">
+      <EntityTypeMapping TypeName="BanHangModel.Hỏi_đáp">
+        <MappingFragment StoreEntitySet="Hỏi_đáp">
+          <ScalarProperty Name="Mã_hỏi_đáp" ColumnName="Mã_hỏi_đáp" />
+          <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
+          <ScalarProperty Name="Thời_gian" ColumnName="Thời_gian" />
+          <ScalarProperty Name="Nội_dung" ColumnName="Nội_dung" />
+          <ScalarProperty Name="Mã_giỏ" ColumnName="Mã_giỏ" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Khách_hàng">
+      <EntityTypeMapping TypeName="BanHangModel.Khách_hàng">
+        <MappingFragment StoreEntitySet="Khách_hàng">
+          <ScalarProperty Name="Mã_KH" ColumnName="Mã_KH" />
+          <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SẢN_PHẨM">
+      <EntityTypeMapping TypeName="BanHangModel.SẢN_PHẨM">
+        <MappingFragment StoreEntitySet="SẢN_PHẨM">
+          <ScalarProperty Name="Mã_SP" ColumnName="Mã_SP" />
+          <ScalarProperty Name="Tên_SP" ColumnName="Tên_SP" />
+          <ScalarProperty Name="Giảm_giá" ColumnName="Giảm_giá" />
+          <ScalarProperty Name="Ảnh" ColumnName="Ảnh" />
+          <ScalarProperty Name="Giá" ColumnName="Giá" />
+          <ScalarProperty Name="Giá_lên_đời" ColumnName="Giá_lên_đời" />
+          <ScalarProperty Name="Yêu_thích" ColumnName="Yêu_thích" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THƯƠNG_HIỆU">
+      <EntityTypeMapping TypeName="BanHangModel.THƯƠNG_HIỆU">
+        <MappingFragment StoreEntitySet="THƯƠNG_HIỆU">
+          <ScalarProperty Name="Mã_TH" ColumnName="Mã_TH" />
+          <ScalarProperty Name="Tên_TH" ColumnName="Tên_TH" />
+          <ScalarProperty Name="Mã_User" ColumnName="Mã_User" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CTTS">
+      <EntityTypeMapping TypeName="BanHangModel.CTT">
+        <MappingFragment StoreEntitySet="CTTS">
+          <ScalarProperty Name="Kích_thước" ColumnName="Kích_thước" />
+          <ScalarProperty Name="Camera_sau" ColumnName="Camera_sau" />
+          <ScalarProperty Name="Camera_trước" ColumnName="Camera_trước" />
+          <ScalarProperty Name="Chip" ColumnName="Chip" />
+          <ScalarProperty Name="Ram" ColumnName="Ram" />
+          <ScalarProperty Name="Rom" ColumnName="Rom" />
+          <ScalarProperty Name="Pin" ColumnName="Pin" />
+          <ScalarProperty Name="OS" ColumnName="OS" />
+          <ScalarProperty Name="Độ_phân_giải" ColumnName="Độ_phân_giải" />
+          <ScalarProperty Name="Mã_CTTS" ColumnName="Mã_CTTS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nhận_tại_của_hàng">
+      <EntityTypeMapping TypeName="BanHangModel.Nhận_tại_của_hàng">
+        <MappingFragment StoreEntitySet="Nhận_tại_của_hàng">
+          <ScalarProperty Name="Tỉnh_thành" ColumnName="Tỉnh_thành" />
+          <ScalarProperty Name="Quận_huyện" ColumnName="Quận_huyện" />
+          <ScalarProperty Name="Địa_chỉ_" ColumnName="Địa_chỉ_" />
+          <ScalarProperty Name="Ghi_chú" ColumnName="Ghi_chú" />
+          <ScalarProperty Name="Mã_nhận_hàng" ColumnName="Mã_nhận_hàng" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nhận_tận_nơi">
+      <EntityTypeMapping TypeName="BanHangModel.Nhận_tận_nơi">
+        <MappingFragment StoreEntitySet="Nhận_tận_nơi">
+          <ScalarProperty Name="Tỉnh_thành" ColumnName="Tỉnh_thành" />
+          <ScalarProperty Name="Quận_huyện" ColumnName="Quận_huyện" />
+          <ScalarProperty Name="Địa_chỉ" ColumnName="Địa_chỉ" />
+          <ScalarProperty Name="Ghi_chú" ColumnName="Ghi_chú" />
+          <ScalarProperty Name="Mã_nhận_hàng" ColumnName="Mã_nhận_hàng" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

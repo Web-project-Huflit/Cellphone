@@ -1,0 +1,899 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BanHangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AdminUser">
+          <Key>
+            <PropertyRef Name="Mã_User" />
+          </Key>
+          <Property Name="Mã_User" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Vai_trò" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Phone_Email" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Mật_khẩu" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Ngày_tham_gia" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Mã_cmt" />
+          </Key>
+          <Property Name="Mã_cmt" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="Họ_tên" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Thời_gian" Type="date" Nullable="false" />
+          <Property Name="Nội_dung" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Mã_SP" Type="char" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CTGH">
+          <Key>
+            <PropertyRef Name="Mã_nhận_hàng" />
+          </Key>
+          <Property Name="Họ_tên" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Tổng_tiền" Type="float" Nullable="false" />
+          <Property Name="Mã_nhận_hàng" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="Mã_giỏ" Type="char" MaxLength="8" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CTSP">
+          <Key>
+            <PropertyRef Name="Mã_CTTS" />
+          </Key>
+          <Property Name="Thêm_ảnh" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Lượt_đánh_giá" Type="int" Nullable="false" />
+          <Property Name="Mô_tả" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Màu" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Trả_góp" Type="float" Nullable="false" />
+          <Property Name="Ưu_đãi" Type="float" Nullable="false" />
+          <Property Name="Mã_CTTS" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="Mã_SP" Type="char" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BanHang.dbo.CTTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CTTS">
+          <Key>
+            <PropertyRef Name="Kích_thước" />
+            <PropertyRef Name="Camera_sau" />
+            <PropertyRef Name="Camera_trước" />
+            <PropertyRef Name="Chip" />
+            <PropertyRef Name="Ram" />
+            <PropertyRef Name="Rom" />
+            <PropertyRef Name="Pin" />
+            <PropertyRef Name="OS" />
+            <PropertyRef Name="Độ_phân_giải" />
+            <PropertyRef Name="Mã_CTTS" />
+          </Key>
+          <Property Name="Kích_thước" Type="float" Nullable="false" />
+          <Property Name="Camera_sau" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Camera_trước" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Chip" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Ram" Type="int" Nullable="false" />
+          <Property Name="Rom" Type="int" Nullable="false" />
+          <Property Name="Pin" Type="int" Nullable="false" />
+          <Property Name="OS" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Độ_phân_giải" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Mã_CTTS" Type="char" MaxLength="5" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Đơn_hàng">
+          <Key>
+            <PropertyRef Name="Mã_đơn_hàng" />
+          </Key>
+          <Property Name="Mã_đơn_hàng" Type="char" MaxLength="9" Nullable="false" />
+          <Property Name="Thời_gian" Type="date" Nullable="false" />
+          <Property Name="Mã_nhận_hàng" Type="char" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Giỏ_hàng">
+          <Key>
+            <PropertyRef Name="Mã_giỏ" />
+          </Key>
+          <Property Name="Mã_giỏ" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="Đơn_giá" Type="float" Nullable="false" />
+          <Property Name="Số_lượng" Type="int" Nullable="false" />
+          <Property Name="Tạm_tính" Type="float" Nullable="false" />
+          <Property Name="Mã_KH" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Hỏi_đáp">
+          <Key>
+            <PropertyRef Name="Mã_hỏi_đáp" />
+          </Key>
+          <Property Name="Mã_hỏi_đáp" Type="char" MaxLength="7" Nullable="false" />
+          <Property Name="Họ_tên" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Thời_gian" Type="int" Nullable="false" />
+          <Property Name="Nội_dung" Type="int" Nullable="false" />
+          <Property Name="Mã_giỏ" Type="char" MaxLength="8" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Khách_hàng">
+          <Key>
+            <PropertyRef Name="Mã_KH" />
+          </Key>
+          <Property Name="Mã_KH" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Họ_tên" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Phone" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BanHang.dbo.Nhận_tại_của_hàng' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Nhận_tại_của_hàng">
+          <Key>
+            <PropertyRef Name="Tỉnh_thành" />
+            <PropertyRef Name="Quận_huyện" />
+            <PropertyRef Name="Địa_chỉ_" />
+            <PropertyRef Name="Ghi_chú" />
+            <PropertyRef Name="Mã_nhận_hàng" />
+          </Key>
+          <Property Name="Tỉnh_thành" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Quận_huyện" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Địa_chỉ_" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Ghi_chú" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Mã_nhận_hàng" Type="char" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BanHang.dbo.Nhận_tận_nơi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Nhận_tận_nơi">
+          <Key>
+            <PropertyRef Name="Tỉnh_thành" />
+            <PropertyRef Name="Quận_huyện" />
+            <PropertyRef Name="Địa_chỉ" />
+            <PropertyRef Name="Ghi_chú" />
+            <PropertyRef Name="Mã_nhận_hàng" />
+          </Key>
+          <Property Name="Tỉnh_thành" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Quận_huyện" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Địa_chỉ" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Ghi_chú" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Mã_nhận_hàng" Type="char" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SẢN_PHẨM">
+          <Key>
+            <PropertyRef Name="Mã_SP" />
+          </Key>
+          <Property Name="Mã_SP" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="Tên_SP" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Giảm_giá" Type="float" Nullable="false" />
+          <Property Name="Ảnh" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Giá" Type="float" Nullable="false" />
+          <Property Name="Giá_lên_đời" Type="float" Nullable="false" />
+          <Property Name="Yêu_thích" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="THƯƠNG_HIỆU">
+          <Key>
+            <PropertyRef Name="Mã_TH" />
+          </Key>
+          <Property Name="Mã_TH" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="Tên_TH" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Mã_User" Type="char" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Comment__Mã_SP__3D5E1FD2">
+          <End Role="SẢN_PHẨM" Type="Self.SẢN_PHẨM" Multiplicity="1" />
+          <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SẢN_PHẨM">
+              <PropertyRef Name="Mã_SP" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="Mã_SP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTGH__Mã_giỏ__49C3F6B7">
+          <End Role="Giỏ_hàng" Type="Self.Giỏ_hàng" Multiplicity="1" />
+          <End Role="CTGH" Type="Self.CTGH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Giỏ_hàng">
+              <PropertyRef Name="Mã_giỏ" />
+            </Principal>
+            <Dependent Role="CTGH">
+              <PropertyRef Name="Mã_giỏ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTSP__Mã_SP__38996AB5">
+          <End Role="SẢN_PHẨM" Type="Self.SẢN_PHẨM" Multiplicity="1" />
+          <End Role="CTSP" Type="Self.CTSP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SẢN_PHẨM">
+              <PropertyRef Name="Mã_SP" />
+            </Principal>
+            <Dependent Role="CTSP">
+              <PropertyRef Name="Mã_SP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTTS__Mã_CTTS__3A81B327">
+          <End Role="CTSP" Type="Self.CTSP" Multiplicity="1" />
+          <End Role="CTTS" Type="Self.CTTS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CTSP">
+              <PropertyRef Name="Mã_CTTS" />
+            </Principal>
+            <Dependent Role="CTTS">
+              <PropertyRef Name="Mã_CTTS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Đơn_hàng__Mã_nhậ__4CA06362">
+          <End Role="CTGH" Type="Self.CTGH" Multiplicity="1" />
+          <End Role="Đơn_hàng" Type="Self.Đơn_hàng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CTGH">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Principal>
+            <Dependent Role="Đơn_hàng">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Giỏ_hàng__Mã_KH__46E78A0C">
+          <End Role="Khách_hàng" Type="Self.Khách_hàng" Multiplicity="1" />
+          <End Role="Giỏ_hàng" Type="Self.Giỏ_hàng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Khách_hàng">
+              <PropertyRef Name="Mã_KH" />
+            </Principal>
+            <Dependent Role="Giỏ_hàng">
+              <PropertyRef Name="Mã_KH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Hỏi_đáp__Mã_giỏ__534D60F1">
+          <End Role="Giỏ_hàng" Type="Self.Giỏ_hàng" Multiplicity="1" />
+          <End Role="Hỏi_đáp" Type="Self.Hỏi_đáp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Giỏ_hàng">
+              <PropertyRef Name="Mã_giỏ" />
+            </Principal>
+            <Dependent Role="Hỏi_đáp">
+              <PropertyRef Name="Mã_giỏ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nhận_tại___Mã_nh__4E88ABD4">
+          <End Role="CTGH" Type="Self.CTGH" Multiplicity="1" />
+          <End Role="Nhận_tại_của_hàng" Type="Self.Nhận_tại_của_hàng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CTGH">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Principal>
+            <Dependent Role="Nhận_tại_của_hàng">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nhận_tận___Mã_nh__5070F446">
+          <End Role="CTGH" Type="Self.CTGH" Multiplicity="1" />
+          <End Role="Nhận_tận_nơi" Type="Self.Nhận_tận_nơi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CTGH">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Principal>
+            <Dependent Role="Nhận_tận_nơi">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__THƯƠNG_HI__Mã_Us__440B1D61">
+          <End Role="AdminUser" Type="Self.AdminUser" Multiplicity="1" />
+          <End Role="THƯƠNG_HIỆU" Type="Self.THƯƠNG_HIỆU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdminUser">
+              <PropertyRef Name="Mã_User" />
+            </Principal>
+            <Dependent Role="THƯƠNG_HIỆU">
+              <PropertyRef Name="Mã_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BanHangModelStoreContainer">
+          <EntitySet Name="AdminUser" EntityType="Self.AdminUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CTGH" EntityType="Self.CTGH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CTSP" EntityType="Self.CTSP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Đơn_hàng" EntityType="Self.Đơn_hàng" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Giỏ_hàng" EntityType="Self.Giỏ_hàng" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Hỏi_đáp" EntityType="Self.Hỏi_đáp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Khách_hàng" EntityType="Self.Khách_hàng" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SẢN_PHẨM" EntityType="Self.SẢN_PHẨM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THƯƠNG_HIỆU" EntityType="Self.THƯƠNG_HIỆU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CTTS" EntityType="Self.CTTS" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CTTS].[Kích_thước] AS [Kích_thước], 
+    [CTTS].[Camera_sau] AS [Camera_sau], 
+    [CTTS].[Camera_trước] AS [Camera_trước], 
+    [CTTS].[Chip] AS [Chip], 
+    [CTTS].[Ram] AS [Ram], 
+    [CTTS].[Rom] AS [Rom], 
+    [CTTS].[Pin] AS [Pin], 
+    [CTTS].[OS] AS [OS], 
+    [CTTS].[Độ_phân_giải] AS [Độ_phân_giải], 
+    [CTTS].[Mã_CTTS] AS [Mã_CTTS]
+    FROM [dbo].[CTTS] AS [CTTS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Nhận_tại_của_hàng" EntityType="Self.Nhận_tại_của_hàng" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Nhận_tại_của_hàng].[Tỉnh_thành] AS [Tỉnh_thành], 
+    [Nhận_tại_của_hàng].[Quận_huyện] AS [Quận_huyện], 
+    [Nhận_tại_của_hàng].[Địa_chỉ_] AS [Địa_chỉ_], 
+    [Nhận_tại_của_hàng].[Ghi_chú] AS [Ghi_chú], 
+    [Nhận_tại_của_hàng].[Mã_nhận_hàng] AS [Mã_nhận_hàng]
+    FROM [dbo].[Nhận_tại_của_hàng] AS [Nhận_tại_của_hàng]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Nhận_tận_nơi" EntityType="Self.Nhận_tận_nơi" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Nhận_tận_nơi].[Tỉnh_thành] AS [Tỉnh_thành], 
+    [Nhận_tận_nơi].[Quận_huyện] AS [Quận_huyện], 
+    [Nhận_tận_nơi].[Địa_chỉ] AS [Địa_chỉ], 
+    [Nhận_tận_nơi].[Ghi_chú] AS [Ghi_chú], 
+    [Nhận_tận_nơi].[Mã_nhận_hàng] AS [Mã_nhận_hàng]
+    FROM [dbo].[Nhận_tận_nơi] AS [Nhận_tận_nơi]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Comment__Mã_SP__3D5E1FD2" Association="Self.FK__Comment__Mã_SP__3D5E1FD2">
+            <End Role="SẢN_PHẨM" EntitySet="SẢN_PHẨM" />
+            <End Role="Comment" EntitySet="Comment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTGH__Mã_giỏ__49C3F6B7" Association="Self.FK__CTGH__Mã_giỏ__49C3F6B7">
+            <End Role="Giỏ_hàng" EntitySet="Giỏ_hàng" />
+            <End Role="CTGH" EntitySet="CTGH" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTSP__Mã_SP__38996AB5" Association="Self.FK__CTSP__Mã_SP__38996AB5">
+            <End Role="SẢN_PHẨM" EntitySet="SẢN_PHẨM" />
+            <End Role="CTSP" EntitySet="CTSP" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTTS__Mã_CTTS__3A81B327" Association="Self.FK__CTTS__Mã_CTTS__3A81B327">
+            <End Role="CTSP" EntitySet="CTSP" />
+            <End Role="CTTS" EntitySet="CTTS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Đơn_hàng__Mã_nhậ__4CA06362" Association="Self.FK__Đơn_hàng__Mã_nhậ__4CA06362">
+            <End Role="CTGH" EntitySet="CTGH" />
+            <End Role="Đơn_hàng" EntitySet="Đơn_hàng" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Giỏ_hàng__Mã_KH__46E78A0C" Association="Self.FK__Giỏ_hàng__Mã_KH__46E78A0C">
+            <End Role="Khách_hàng" EntitySet="Khách_hàng" />
+            <End Role="Giỏ_hàng" EntitySet="Giỏ_hàng" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Hỏi_đáp__Mã_giỏ__534D60F1" Association="Self.FK__Hỏi_đáp__Mã_giỏ__534D60F1">
+            <End Role="Giỏ_hàng" EntitySet="Giỏ_hàng" />
+            <End Role="Hỏi_đáp" EntitySet="Hỏi_đáp" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nhận_tại___Mã_nh__4E88ABD4" Association="Self.FK__Nhận_tại___Mã_nh__4E88ABD4">
+            <End Role="CTGH" EntitySet="CTGH" />
+            <End Role="Nhận_tại_của_hàng" EntitySet="Nhận_tại_của_hàng" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nhận_tận___Mã_nh__5070F446" Association="Self.FK__Nhận_tận___Mã_nh__5070F446">
+            <End Role="CTGH" EntitySet="CTGH" />
+            <End Role="Nhận_tận_nơi" EntitySet="Nhận_tận_nơi" />
+          </AssociationSet>
+          <AssociationSet Name="FK__THƯƠNG_HI__Mã_Us__440B1D61" Association="Self.FK__THƯƠNG_HI__Mã_Us__440B1D61">
+            <End Role="AdminUser" EntitySet="AdminUser" />
+            <End Role="THƯƠNG_HIỆU" EntitySet="THƯƠNG_HIỆU" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AdminUser">
+          <Key>
+            <PropertyRef Name="Mã_User" />
+          </Key>
+          <Property Name="Mã_User" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Vai_trò" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phone_Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mật_khẩu" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Ngày_tham_gia" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="THƯƠNG_HIỆU" Relationship="Self.FK__THƯƠNG_HI__Mã_Us__440B1D61" FromRole="AdminUser" ToRole="THƯƠNG_HIỆU" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Mã_cmt" />
+          </Key>
+          <Property Name="Mã_cmt" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Họ_tên" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Thời_gian" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Nội_dung" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mã_SP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="SẢN_PHẨM" Relationship="Self.FK__Comment__Mã_SP__3D5E1FD2" FromRole="Comment" ToRole="SẢN_PHẨM" />
+        </EntityType>
+        <EntityType Name="CTGH">
+          <Key>
+            <PropertyRef Name="Mã_nhận_hàng" />
+          </Key>
+          <Property Name="Họ_tên" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Tổng_tiền" Type="Double" Nullable="false" />
+          <Property Name="Mã_nhận_hàng" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Mã_giỏ" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Giỏ_hàng" Relationship="Self.FK__CTGH__Mã_giỏ__49C3F6B7" FromRole="CTGH" ToRole="Giỏ_hàng" />
+          <NavigationProperty Name="Đơn_hàng" Relationship="Self.FK__Đơn_hàng__Mã_nhậ__4CA06362" FromRole="CTGH" ToRole="Đơn_hàng" />
+          <NavigationProperty Name="Nhận_tại_của_hàng" Relationship="Self.FK__Nhận_tại___Mã_nh__4E88ABD4" FromRole="CTGH" ToRole="Nhận_tại_của_hàng" />
+          <NavigationProperty Name="Nhận_tận_nơi" Relationship="Self.FK__Nhận_tận___Mã_nh__5070F446" FromRole="CTGH" ToRole="Nhận_tận_nơi" />
+        </EntityType>
+        <EntityType Name="CTSP">
+          <Key>
+            <PropertyRef Name="Mã_CTTS" />
+          </Key>
+          <Property Name="Thêm_ảnh" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lượt_đánh_giá" Type="Int32" Nullable="false" />
+          <Property Name="Mô_tả" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Màu" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Trả_góp" Type="Double" Nullable="false" />
+          <Property Name="Ưu_đãi" Type="Double" Nullable="false" />
+          <Property Name="Mã_CTTS" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Mã_SP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="SẢN_PHẨM" Relationship="Self.FK__CTSP__Mã_SP__38996AB5" FromRole="CTSP" ToRole="SẢN_PHẨM" />
+          <NavigationProperty Name="CTTS" Relationship="Self.FK__CTTS__Mã_CTTS__3A81B327" FromRole="CTSP" ToRole="CTTS" />
+        </EntityType>
+        <EntityType Name="Đơn_hàng">
+          <Key>
+            <PropertyRef Name="Mã_đơn_hàng" />
+          </Key>
+          <Property Name="Mã_đơn_hàng" Type="String" MaxLength="9" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Thời_gian" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Mã_nhận_hàng" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CTGH" Relationship="Self.FK__Đơn_hàng__Mã_nhậ__4CA06362" FromRole="Đơn_hàng" ToRole="CTGH" />
+        </EntityType>
+        <EntityType Name="Giỏ_hàng">
+          <Key>
+            <PropertyRef Name="Mã_giỏ" />
+          </Key>
+          <Property Name="Mã_giỏ" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Đơn_giá" Type="Double" Nullable="false" />
+          <Property Name="Số_lượng" Type="Int32" Nullable="false" />
+          <Property Name="Tạm_tính" Type="Double" Nullable="false" />
+          <Property Name="Mã_KH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CTGHs" Relationship="Self.FK__CTGH__Mã_giỏ__49C3F6B7" FromRole="Giỏ_hàng" ToRole="CTGH" />
+          <NavigationProperty Name="Khách_hàng" Relationship="Self.FK__Giỏ_hàng__Mã_KH__46E78A0C" FromRole="Giỏ_hàng" ToRole="Khách_hàng" />
+          <NavigationProperty Name="Hỏi_đáp" Relationship="Self.FK__Hỏi_đáp__Mã_giỏ__534D60F1" FromRole="Giỏ_hàng" ToRole="Hỏi_đáp" />
+        </EntityType>
+        <EntityType Name="Hỏi_đáp">
+          <Key>
+            <PropertyRef Name="Mã_hỏi_đáp" />
+          </Key>
+          <Property Name="Mã_hỏi_đáp" Type="String" MaxLength="7" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Họ_tên" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Thời_gian" Type="Int32" Nullable="false" />
+          <Property Name="Nội_dung" Type="Int32" Nullable="false" />
+          <Property Name="Mã_giỏ" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Giỏ_hàng" Relationship="Self.FK__Hỏi_đáp__Mã_giỏ__534D60F1" FromRole="Hỏi_đáp" ToRole="Giỏ_hàng" />
+        </EntityType>
+        <EntityType Name="Khách_hàng">
+          <Key>
+            <PropertyRef Name="Mã_KH" />
+          </Key>
+          <Property Name="Mã_KH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Họ_tên" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Giỏ_hàng" Relationship="Self.FK__Giỏ_hàng__Mã_KH__46E78A0C" FromRole="Khách_hàng" ToRole="Giỏ_hàng" />
+        </EntityType>
+        <EntityType Name="SẢN_PHẨM">
+          <Key>
+            <PropertyRef Name="Mã_SP" />
+          </Key>
+          <Property Name="Mã_SP" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Tên_SP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Giảm_giá" Type="Double" Nullable="false" />
+          <Property Name="Ảnh" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Giá" Type="Double" Nullable="false" />
+          <Property Name="Giá_lên_đời" Type="Double" Nullable="false" />
+          <Property Name="Yêu_thích" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Comments" Relationship="Self.FK__Comment__Mã_SP__3D5E1FD2" FromRole="SẢN_PHẨM" ToRole="Comment" />
+          <NavigationProperty Name="CTSPs" Relationship="Self.FK__CTSP__Mã_SP__38996AB5" FromRole="SẢN_PHẨM" ToRole="CTSP" />
+        </EntityType>
+        <EntityType Name="THƯƠNG_HIỆU">
+          <Key>
+            <PropertyRef Name="Mã_TH" />
+          </Key>
+          <Property Name="Mã_TH" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Tên_TH" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mã_User" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="AdminUser" Relationship="Self.FK__THƯƠNG_HI__Mã_Us__440B1D61" FromRole="THƯƠNG_HIỆU" ToRole="AdminUser" />
+        </EntityType>
+        <EntityType Name="CTT">
+          <Key>
+            <PropertyRef Name="Kích_thước" />
+            <PropertyRef Name="Camera_sau" />
+            <PropertyRef Name="Camera_trước" />
+            <PropertyRef Name="Chip" />
+            <PropertyRef Name="Ram" />
+            <PropertyRef Name="Rom" />
+            <PropertyRef Name="Pin" />
+            <PropertyRef Name="OS" />
+            <PropertyRef Name="Độ_phân_giải" />
+            <PropertyRef Name="Mã_CTTS" />
+          </Key>
+          <Property Name="Kích_thước" Type="Double" Nullable="false" />
+          <Property Name="Camera_sau" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Camera_trước" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Chip" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ram" Type="Int32" Nullable="false" />
+          <Property Name="Rom" Type="Int32" Nullable="false" />
+          <Property Name="Pin" Type="Int32" Nullable="false" />
+          <Property Name="OS" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Độ_phân_giải" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mã_CTTS" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CTSP" Relationship="Self.FK__CTTS__Mã_CTTS__3A81B327" FromRole="CTTS" ToRole="CTSP" />
+        </EntityType>
+        <EntityType Name="Nhận_tại_của_hàng">
+          <Key>
+            <PropertyRef Name="Tỉnh_thành" />
+            <PropertyRef Name="Quận_huyện" />
+            <PropertyRef Name="Địa_chỉ_" />
+            <PropertyRef Name="Ghi_chú" />
+            <PropertyRef Name="Mã_nhận_hàng" />
+          </Key>
+          <Property Name="Tỉnh_thành" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Quận_huyện" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Địa_chỉ_" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ghi_chú" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mã_nhận_hàng" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CTGH" Relationship="Self.FK__Nhận_tại___Mã_nh__4E88ABD4" FromRole="Nhận_tại_của_hàng" ToRole="CTGH" />
+        </EntityType>
+        <EntityType Name="Nhận_tận_nơi">
+          <Key>
+            <PropertyRef Name="Tỉnh_thành" />
+            <PropertyRef Name="Quận_huyện" />
+            <PropertyRef Name="Địa_chỉ" />
+            <PropertyRef Name="Ghi_chú" />
+            <PropertyRef Name="Mã_nhận_hàng" />
+          </Key>
+          <Property Name="Tỉnh_thành" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Quận_huyện" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Địa_chỉ" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Ghi_chú" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mã_nhận_hàng" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="CTGH" Relationship="Self.FK__Nhận_tận___Mã_nh__5070F446" FromRole="Nhận_tận_nơi" ToRole="CTGH" />
+        </EntityType>
+        <Association Name="FK__THƯƠNG_HI__Mã_Us__440B1D61">
+          <End Role="AdminUser" Type="Self.AdminUser" Multiplicity="1" />
+          <End Role="THƯƠNG_HIỆU" Type="Self.THƯƠNG_HIỆU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdminUser">
+              <PropertyRef Name="Mã_User" />
+            </Principal>
+            <Dependent Role="THƯƠNG_HIỆU">
+              <PropertyRef Name="Mã_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Comment__Mã_SP__3D5E1FD2">
+          <End Role="SẢN_PHẨM" Type="Self.SẢN_PHẨM" Multiplicity="1" />
+          <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SẢN_PHẨM">
+              <PropertyRef Name="Mã_SP" />
+            </Principal>
+            <Dependent Role="Comment">
+              <PropertyRef Name="Mã_SP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTGH__Mã_giỏ__49C3F6B7">
+          <End Role="Giỏ_hàng" Type="Self.Giỏ_hàng" Multiplicity="1" />
+          <End Role="CTGH" Type="Self.CTGH" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Giỏ_hàng">
+              <PropertyRef Name="Mã_giỏ" />
+            </Principal>
+            <Dependent Role="CTGH">
+              <PropertyRef Name="Mã_giỏ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Đơn_hàng__Mã_nhậ__4CA06362">
+          <End Role="CTGH" Type="Self.CTGH" Multiplicity="1" />
+          <End Role="Đơn_hàng" Type="Self.Đơn_hàng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CTGH">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Principal>
+            <Dependent Role="Đơn_hàng">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nhận_tại___Mã_nh__4E88ABD4">
+          <End Role="CTGH" Type="Self.CTGH" Multiplicity="1" />
+          <End Role="Nhận_tại_của_hàng" Type="Self.Nhận_tại_của_hàng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CTGH">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Principal>
+            <Dependent Role="Nhận_tại_của_hàng">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Nhận_tận___Mã_nh__5070F446">
+          <End Role="CTGH" Type="Self.CTGH" Multiplicity="1" />
+          <End Role="Nhận_tận_nơi" Type="Self.Nhận_tận_nơi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CTGH">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Principal>
+            <Dependent Role="Nhận_tận_nơi">
+              <PropertyRef Name="Mã_nhận_hàng" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTSP__Mã_SP__38996AB5">
+          <End Role="SẢN_PHẨM" Type="Self.SẢN_PHẨM" Multiplicity="1" />
+          <End Role="CTSP" Type="Self.CTSP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SẢN_PHẨM">
+              <PropertyRef Name="Mã_SP" />
+            </Principal>
+            <Dependent Role="CTSP">
+              <PropertyRef Name="Mã_SP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CTTS__Mã_CTTS__3A81B327">
+          <End Role="CTSP" Type="Self.CTSP" Multiplicity="1" />
+          <End Role="CTTS" Type="Self.CTT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CTSP">
+              <PropertyRef Name="Mã_CTTS" />
+            </Principal>
+            <Dependent Role="CTTS">
+              <PropertyRef Name="Mã_CTTS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Giỏ_hàng__Mã_KH__46E78A0C">
+          <End Role="Khách_hàng" Type="Self.Khách_hàng" Multiplicity="1" />
+          <End Role="Giỏ_hàng" Type="Self.Giỏ_hàng" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Khách_hàng">
+              <PropertyRef Name="Mã_KH" />
+            </Principal>
+            <Dependent Role="Giỏ_hàng">
+              <PropertyRef Name="Mã_KH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Hỏi_đáp__Mã_giỏ__534D60F1">
+          <End Role="Giỏ_hàng" Type="Self.Giỏ_hàng" Multiplicity="1" />
+          <End Role="Hỏi_đáp" Type="Self.Hỏi_đáp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Giỏ_hàng">
+              <PropertyRef Name="Mã_giỏ" />
+            </Principal>
+            <Dependent Role="Hỏi_đáp">
+              <PropertyRef Name="Mã_giỏ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BanHangEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AdminUsers" EntityType="Self.AdminUser" />
+          <EntitySet Name="Comments" EntityType="Self.Comment" />
+          <EntitySet Name="CTGHs" EntityType="Self.CTGH" />
+          <EntitySet Name="CTSPs" EntityType="Self.CTSP" />
+          <EntitySet Name="Đơn_hàng" EntityType="Self.Đơn_hàng" />
+          <EntitySet Name="Giỏ_hàng" EntityType="Self.Giỏ_hàng" />
+          <EntitySet Name="Hỏi_đáp" EntityType="Self.Hỏi_đáp" />
+          <EntitySet Name="Khách_hàng" EntityType="Self.Khách_hàng" />
+          <EntitySet Name="SẢN_PHẨM" EntityType="Self.SẢN_PHẨM" />
+          <EntitySet Name="THƯƠNG_HIỆU" EntityType="Self.THƯƠNG_HIỆU" />
+          <EntitySet Name="CTTS" EntityType="Self.CTT" />
+          <EntitySet Name="Nhận_tại_của_hàng" EntityType="Self.Nhận_tại_của_hàng" />
+          <EntitySet Name="Nhận_tận_nơi" EntityType="Self.Nhận_tận_nơi" />
+          <AssociationSet Name="FK__THƯƠNG_HI__Mã_Us__440B1D61" Association="Self.FK__THƯƠNG_HI__Mã_Us__440B1D61">
+            <End Role="AdminUser" EntitySet="AdminUsers" />
+            <End Role="THƯƠNG_HIỆU" EntitySet="THƯƠNG_HIỆU" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Comment__Mã_SP__3D5E1FD2" Association="Self.FK__Comment__Mã_SP__3D5E1FD2">
+            <End Role="SẢN_PHẨM" EntitySet="SẢN_PHẨM" />
+            <End Role="Comment" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTGH__Mã_giỏ__49C3F6B7" Association="Self.FK__CTGH__Mã_giỏ__49C3F6B7">
+            <End Role="Giỏ_hàng" EntitySet="Giỏ_hàng" />
+            <End Role="CTGH" EntitySet="CTGHs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Đơn_hàng__Mã_nhậ__4CA06362" Association="Self.FK__Đơn_hàng__Mã_nhậ__4CA06362">
+            <End Role="CTGH" EntitySet="CTGHs" />
+            <End Role="Đơn_hàng" EntitySet="Đơn_hàng" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nhận_tại___Mã_nh__4E88ABD4" Association="Self.FK__Nhận_tại___Mã_nh__4E88ABD4">
+            <End Role="CTGH" EntitySet="CTGHs" />
+            <End Role="Nhận_tại_của_hàng" EntitySet="Nhận_tại_của_hàng" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Nhận_tận___Mã_nh__5070F446" Association="Self.FK__Nhận_tận___Mã_nh__5070F446">
+            <End Role="CTGH" EntitySet="CTGHs" />
+            <End Role="Nhận_tận_nơi" EntitySet="Nhận_tận_nơi" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTSP__Mã_SP__38996AB5" Association="Self.FK__CTSP__Mã_SP__38996AB5">
+            <End Role="SẢN_PHẨM" EntitySet="SẢN_PHẨM" />
+            <End Role="CTSP" EntitySet="CTSPs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CTTS__Mã_CTTS__3A81B327" Association="Self.FK__CTTS__Mã_CTTS__3A81B327">
+            <End Role="CTSP" EntitySet="CTSPs" />
+            <End Role="CTTS" EntitySet="CTTS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Giỏ_hàng__Mã_KH__46E78A0C" Association="Self.FK__Giỏ_hàng__Mã_KH__46E78A0C">
+            <End Role="Khách_hàng" EntitySet="Khách_hàng" />
+            <End Role="Giỏ_hàng" EntitySet="Giỏ_hàng" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Hỏi_đáp__Mã_giỏ__534D60F1" Association="Self.FK__Hỏi_đáp__Mã_giỏ__534D60F1">
+            <End Role="Giỏ_hàng" EntitySet="Giỏ_hàng" />
+            <End Role="Hỏi_đáp" EntitySet="Hỏi_đáp" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BanHangModelStoreContainer" CdmEntityContainer="BanHangEntities">
+          <EntitySetMapping Name="AdminUsers">
+            <EntityTypeMapping TypeName="BanHangModel.AdminUser">
+              <MappingFragment StoreEntitySet="AdminUser">
+                <ScalarProperty Name="Mã_User" ColumnName="Mã_User" />
+                <ScalarProperty Name="Vai_trò" ColumnName="Vai_trò" />
+                <ScalarProperty Name="Phone_Email" ColumnName="Phone_Email" />
+                <ScalarProperty Name="Mật_khẩu" ColumnName="Mật_khẩu" />
+                <ScalarProperty Name="Ngày_tham_gia" ColumnName="Ngày_tham_gia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="BanHangModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="Mã_cmt" ColumnName="Mã_cmt" />
+                <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
+                <ScalarProperty Name="Thời_gian" ColumnName="Thời_gian" />
+                <ScalarProperty Name="Nội_dung" ColumnName="Nội_dung" />
+                <ScalarProperty Name="Mã_SP" ColumnName="Mã_SP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTGHs">
+            <EntityTypeMapping TypeName="BanHangModel.CTGH">
+              <MappingFragment StoreEntitySet="CTGH">
+                <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Tổng_tiền" ColumnName="Tổng_tiền" />
+                <ScalarProperty Name="Mã_nhận_hàng" ColumnName="Mã_nhận_hàng" />
+                <ScalarProperty Name="Mã_giỏ" ColumnName="Mã_giỏ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTSPs">
+            <EntityTypeMapping TypeName="BanHangModel.CTSP">
+              <MappingFragment StoreEntitySet="CTSP">
+                <ScalarProperty Name="Thêm_ảnh" ColumnName="Thêm_ảnh" />
+                <ScalarProperty Name="Lượt_đánh_giá" ColumnName="Lượt_đánh_giá" />
+                <ScalarProperty Name="Mô_tả" ColumnName="Mô_tả" />
+                <ScalarProperty Name="Màu" ColumnName="Màu" />
+                <ScalarProperty Name="Trả_góp" ColumnName="Trả_góp" />
+                <ScalarProperty Name="Ưu_đãi" ColumnName="Ưu_đãi" />
+                <ScalarProperty Name="Mã_CTTS" ColumnName="Mã_CTTS" />
+                <ScalarProperty Name="Mã_SP" ColumnName="Mã_SP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Đơn_hàng">
+            <EntityTypeMapping TypeName="BanHangModel.Đơn_hàng">
+              <MappingFragment StoreEntitySet="Đơn_hàng">
+                <ScalarProperty Name="Mã_đơn_hàng" ColumnName="Mã_đơn_hàng" />
+                <ScalarProperty Name="Thời_gian" ColumnName="Thời_gian" />
+                <ScalarProperty Name="Mã_nhận_hàng" ColumnName="Mã_nhận_hàng" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Giỏ_hàng">
+            <EntityTypeMapping TypeName="BanHangModel.Giỏ_hàng">
+              <MappingFragment StoreEntitySet="Giỏ_hàng">
+                <ScalarProperty Name="Mã_giỏ" ColumnName="Mã_giỏ" />
+                <ScalarProperty Name="Đơn_giá" ColumnName="Đơn_giá" />
+                <ScalarProperty Name="Số_lượng" ColumnName="Số_lượng" />
+                <ScalarProperty Name="Tạm_tính" ColumnName="Tạm_tính" />
+                <ScalarProperty Name="Mã_KH" ColumnName="Mã_KH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hỏi_đáp">
+            <EntityTypeMapping TypeName="BanHangModel.Hỏi_đáp">
+              <MappingFragment StoreEntitySet="Hỏi_đáp">
+                <ScalarProperty Name="Mã_hỏi_đáp" ColumnName="Mã_hỏi_đáp" />
+                <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
+                <ScalarProperty Name="Thời_gian" ColumnName="Thời_gian" />
+                <ScalarProperty Name="Nội_dung" ColumnName="Nội_dung" />
+                <ScalarProperty Name="Mã_giỏ" ColumnName="Mã_giỏ" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Khách_hàng">
+            <EntityTypeMapping TypeName="BanHangModel.Khách_hàng">
+              <MappingFragment StoreEntitySet="Khách_hàng">
+                <ScalarProperty Name="Mã_KH" ColumnName="Mã_KH" />
+                <ScalarProperty Name="Họ_tên" ColumnName="Họ_tên" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SẢN_PHẨM">
+            <EntityTypeMapping TypeName="BanHangModel.SẢN_PHẨM">
+              <MappingFragment StoreEntitySet="SẢN_PHẨM">
+                <ScalarProperty Name="Mã_SP" ColumnName="Mã_SP" />
+                <ScalarProperty Name="Tên_SP" ColumnName="Tên_SP" />
+                <ScalarProperty Name="Giảm_giá" ColumnName="Giảm_giá" />
+                <ScalarProperty Name="Ảnh" ColumnName="Ảnh" />
+                <ScalarProperty Name="Giá" ColumnName="Giá" />
+                <ScalarProperty Name="Giá_lên_đời" ColumnName="Giá_lên_đời" />
+                <ScalarProperty Name="Yêu_thích" ColumnName="Yêu_thích" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THƯƠNG_HIỆU">
+            <EntityTypeMapping TypeName="BanHangModel.THƯƠNG_HIỆU">
+              <MappingFragment StoreEntitySet="THƯƠNG_HIỆU">
+                <ScalarProperty Name="Mã_TH" ColumnName="Mã_TH" />
+                <ScalarProperty Name="Tên_TH" ColumnName="Tên_TH" />
+                <ScalarProperty Name="Mã_User" ColumnName="Mã_User" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CTTS">
+            <EntityTypeMapping TypeName="BanHangModel.CTT">
+              <MappingFragment StoreEntitySet="CTTS">
+                <ScalarProperty Name="Kích_thước" ColumnName="Kích_thước" />
+                <ScalarProperty Name="Camera_sau" ColumnName="Camera_sau" />
+                <ScalarProperty Name="Camera_trước" ColumnName="Camera_trước" />
+                <ScalarProperty Name="Chip" ColumnName="Chip" />
+                <ScalarProperty Name="Ram" ColumnName="Ram" />
+                <ScalarProperty Name="Rom" ColumnName="Rom" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="OS" ColumnName="OS" />
+                <ScalarProperty Name="Độ_phân_giải" ColumnName="Độ_phân_giải" />
+                <ScalarProperty Name="Mã_CTTS" ColumnName="Mã_CTTS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nhận_tại_của_hàng">
+            <EntityTypeMapping TypeName="BanHangModel.Nhận_tại_của_hàng">
+              <MappingFragment StoreEntitySet="Nhận_tại_của_hàng">
+                <ScalarProperty Name="Tỉnh_thành" ColumnName="Tỉnh_thành" />
+                <ScalarProperty Name="Quận_huyện" ColumnName="Quận_huyện" />
+                <ScalarProperty Name="Địa_chỉ_" ColumnName="Địa_chỉ_" />
+                <ScalarProperty Name="Ghi_chú" ColumnName="Ghi_chú" />
+                <ScalarProperty Name="Mã_nhận_hàng" ColumnName="Mã_nhận_hàng" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nhận_tận_nơi">
+            <EntityTypeMapping TypeName="BanHangModel.Nhận_tận_nơi">
+              <MappingFragment StoreEntitySet="Nhận_tận_nơi">
+                <ScalarProperty Name="Tỉnh_thành" ColumnName="Tỉnh_thành" />
+                <ScalarProperty Name="Quận_huyện" ColumnName="Quận_huyện" />
+                <ScalarProperty Name="Địa_chỉ" ColumnName="Địa_chỉ" />
+                <ScalarProperty Name="Ghi_chú" ColumnName="Ghi_chú" />
+                <ScalarProperty Name="Mã_nhận_hàng" ColumnName="Mã_nhận_hàng" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
