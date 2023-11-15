@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3B321D86-32BF-4ED1-AA18-88925F947C95}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebProject</RootNamespace>
+    <AssemblyName>WebProject</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44319</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerLaunchUrl>http://{ServiceIPAddress}</DockerLaunchUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AdminUser.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Comment.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CTGH.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CTSP.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CTT.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Giỏ_hàng.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Hỏi_đáp.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Khách_hàng.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCell.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCell.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCell.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelCell.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelCell.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Nhận_tại_của_hàng.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Nhận_tận_nơi.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SẢN_PHẨM.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\THƯƠNG_HIỆU.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Đơn_hàng.cs">
+      <DependentUpon>ModelCell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Models\ModelCell.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCell.edmx</DependentUpon>
+      <LastGenOutput>ModelCell.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelCell.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelCell.edmx</DependentUpon>
+      <LastGenOutput>ModelCell.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="wwwroot\css\productlist.css" />
+    <Content Include="wwwroot\css\style-login.css" />
+    <Content Include="wwwroot\css\style.css" />
+    <Content Include="wwwroot\css\stylecart.css" />
+    <Content Include="wwwroot\js\cart.js" />
+    <Content Include="wwwroot\js\phones.js" />
+    <Content Include="wwwroot\js\script-login.js" />
+    <Content Include="wwwroot\js\site.js" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <Content Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <Content Include="wwwroot\lib\jquery\LICENSE.txt" />
+    <Content Include="wwwroot\pic-lap\2910_hinhanhmaytinhxachtay.jpg" />
+    <Content Include="wwwroot\pic-lap\dell-n7391-2in1-5842.jpg" />
+    <Content Include="wwwroot\pic-lap\Featured_Laptop-Asus-Core-i7.jpg" />
+    <Content Include="wwwroot\pic-lap\laptop2in1digitaltrends_1280x720-800-resize.jpg" />
+    <Content Include="wwwroot\pic-lap\mua-laptop-dell-hay-asus-5.jpg" />
+    <Content Include="wwwroot\pic-lap\zenbookux4255_1280x720-800-resize.jpg" />
+    <Content Include="wwwroot\pic-phone\dt-game.jpeg" />
+    <Content Include="wwwroot\pic-phone\mongnhe.png" />
+    <Content Include="wwwroot\pic-phone\samsung-galaxy-m51-ra-mat.jpg" />
+    <Content Include="wwwroot\pic-phone\samsunggalaxym62_1280x720-800-resize.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh--7.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh-1.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh-11.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh-2.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh-3.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh-4.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh-5.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh-6.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh-8.jpg" />
+    <Content Include="wwwroot\pic-smart-home\icon-brand-nhathong-minh-9.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\camera-dt.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\cauhinhcao.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\choigame.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\dh-chong-nuoc.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\dh-kt-suc-khoe.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\dh-nghe-goi.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\dh-the-thao.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\dong-ho-tre-em.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\dungluong.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\lapcamung.svg" />
+    <Content Include="wwwroot\picbrand\picrequired\lapdohoa.svg" />
+    <Content Include="wwwroot\picbrand\picrequired\lapgaming.svg" />
+    <Content Include="wwwroot\picbrand\picrequired\lapmongnhe.svg" />
+    <Content Include="wwwroot\picbrand\picrequired\lapvanphong.svg" />
+    <Content Include="wwwroot\picbrand\picrequired\logo-cate-loa.png" />
+    <Content Include="wwwroot\picbrand\picrequired\logo-cate-micro-kara.png" />
+    <Content Include="wwwroot\picbrand\picrequired\logo-cate-micro-thu-am.png" />
+    <Content Include="wwwroot\picbrand\picrequired\logo-cate-tai-nghe.png" />
+    <Content Include="wwwroot\picbrand\picrequired\mong-nhe.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\pintrau.jpg" />
+    <Content Include="wwwroot\picbrand\picrequired\vong-deo-tay.jpg" />
+    <Content Include="wwwroot\Pic\asus tuf.jpg" />
+    <Content Include="wwwroot\Pic\bg-login.png.jpg" />
+    <Content Include="wwwroot\Pic\bg1.svg" />
+    <Content Include="wwwroot\Pic\bg10.svg" />
+    <Content Include="wwwroot\Pic\bg11.svg" />
+    <Content Include="wwwroot\Pic\bg12.svg" />
+    <Content Include="wwwroot\Pic\bg13.png" />
+    <Content Include="wwwroot\Pic\bg14.png" />
+    <Content Include="wwwroot\Pic\bg15.png" />
+    <Content Include="wwwroot\Pic\bg16.png" />
+    <Content Include="wwwroot\Pic\bg17.png" />
+    <Content Include="wwwroot\Pic\bg18.png" />
+    <Content Include="wwwroot\Pic\bg19.png" />
+    <Content Include="wwwroot\Pic\bg2.svg" />
+    <Content Include="wwwroot\Pic\bg20.jpeg" />
+    <Content Include="wwwroot\Pic\bg3.svg" />
+    <Content Include="wwwroot\Pic\bg4.svg" />
+    <Content Include="wwwroot\Pic\bg5.svg" />
+    <Content Include="wwwroot\Pic\bg6.svg" />
+    <Content Include="wwwroot\Pic\bg7.svg" />
+    <Content Include="wwwroot\Pic\bg8.svg" />
+    <Content Include="wwwroot\Pic\bg9.svg" />
+    <Content Include="wwwroot\Pic\cheap.png" />
+    <Content Include="wwwroot\Pic\chup_anh_bang_dien_thoai.jpg" />
+    <Content Include="wwwroot\Pic\csdt.jpg" />
+    <Content Include="wwwroot\Pic\facebook.jpg" />
+    <Content Include="wwwroot\Pic\giaohang.jpg" />
+    <Content Include="wwwroot\Pic\header-img.png" />
+    <Content Include="wwwroot\Pic\iconcable.svg" />
+    <Content Include="wwwroot\Pic\iconfire.png" />
+    <Content Include="wwwroot\Pic\iconwatch.svg" />
+    <Content Include="wwwroot\Pic\intagram.png" />
+    <Content Include="wwwroot\Pic\IP14OM.JPG" />
+    <Content Include="wwwroot\Pic\ipad.png" />
+    <Content Include="wwwroot\Pic\iPhone 15.png" />
+    <Content Include="wwwroot\Pic\Logo.jpg" />
+    <Content Include="wwwroot\Pic\m14.png" />
+    <Content Include="wwwroot\Pic\nubia.png" />
+    <Content Include="wwwroot\Pic\oppo.png" />
+    <Content Include="wwwroot\Pic\ssz5.png" />
+    <Content Include="wwwroot\Pic\vat.jpg" />
+    <Content Include="wwwroot\Pic\vivo.png" />
+    <Content Include="wwwroot\Pic\youtube.png" />
+    <Content Include="wwwroot\Pic\zalo.png" />
+    <None Include="Dockerfile" />
+    <None Include=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
+    <EntityDeploy Include="Models\ModelCell.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelCell.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelCell.edmx.diagram">
+      <DependentUpon>ModelCell.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LayoutCell.cshtml" />
+    <Content Include="Views\Home\TrangChu.cshtml" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="wwwroot\lib\bootstrap\LICENSE" />
+    <Content Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <Content Include="wwwroot\lib\jquery\dist\jquery.min.map" />
+    <Content Include="wwwroot\pic-phone\camera-00.jpg.webp" />
+    <Content Include="wwwroot\picbrand\acer.webp" />
+    <Content Include="wwwroot\picbrand\amazfit.webp" />
+    <Content Include="wwwroot\picbrand\apple-ipad.webp" />
+    <Content Include="wwwroot\picbrand\apple.webp" />
+    <Content Include="wwwroot\picbrand\Apple_watch.webp" />
+    <Content Include="wwwroot\picbrand\Asus %281%29.webp" />
+    <Content Include="wwwroot\picbrand\asus.webp" />
+    <Content Include="wwwroot\picbrand\coros.webp" />
+    <Content Include="wwwroot\picbrand\Dell.webp" />
+    <Content Include="wwwroot\picbrand\garmin.webp" />
+    <Content Include="wwwroot\picbrand\gigabyte.webp" />
+    <Content Include="wwwroot\picbrand\HP.webp" />
+    <Content Include="wwwroot\picbrand\huaewwei-tablet.webp" />
+    <Content Include="wwwroot\picbrand\Lenovo.webp" />
+    <Content Include="wwwroot\picbrand\LG.webp" />
+    <Content Include="wwwroot\picbrand\macbook.webp" />
+    <Content Include="wwwroot\picbrand\Microsoft_surface.webp" />
+    <Content Include="wwwroot\picbrand\MSI.webp" />
+    <Content Include="wwwroot\picbrand\Nokia.webp" />
+    <Content Include="wwwroot\picbrand\nubia.webp" />
+    <Content Include="wwwroot\picbrand\oneplus.webp" />
+    <Content Include="wwwroot\picbrand\oppo.webp" />
+    <Content Include="wwwroot\picbrand\picrequired\choigame-01.webp" />
+    <Content Include="wwwroot\picbrand\picrequired\dohoa-01.webp" />
+    <Content Include="wwwroot\picbrand\picrequired\giaitri-01.webp" />
+    <Content Include="wwwroot\picbrand\picrequired\hoctap-vp01.webp" />
+    <Content Include="wwwroot\picbrand\realme.webp" />
+    <Content Include="wwwroot\picbrand\ssphone.webp" />
+    <Content Include="wwwroot\picbrand\techno.webp" />
+    <Content Include="wwwroot\picbrand\vivo.webp" />
+    <Content Include="wwwroot\picbrand\xiaomi.webp" />
+    <Content Include="wwwroot\Pic\Bat-mi-5-meo-chup-anh-chan-dung-sieu-dep-tren-galaxy-s23-xtmobile.webp" />
+    <Content Include="wwwroot\Pic\bg20.webp" />
+    <Content Include="wwwroot\Pic\tiktok.webp" />
+    <Content Include="Views\Shared\_Cart-Login.cshtml" />
+    <Content Include="Views\Home\GioHang.cshtml" />
+    <Content Include="Views\Home\TaiKhoan.cshtml" />
+    <Content Include="Views\Home\GiaoHang.cshtml" />
+    <Content Include="Views\Category\Phone.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60958</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44319/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets" Condition="Exists('..\packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.19.4\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
